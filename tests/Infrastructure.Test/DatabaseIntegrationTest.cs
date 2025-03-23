@@ -46,7 +46,7 @@ public class DatabaseIntegrationTest : IAsyncLifetime
         var ddd = GenerateDdd();
 
         repository.Add(ddd);
-        var dddDb = repository.FindById(ddd.Id).Result;
+        var dddDb = await repository.FindById(ddd.Id);
 
         dddDb.Should().NotBeNull();
         dddDb!.Region.Should().Be(ddd.Region);
@@ -72,7 +72,7 @@ public class DatabaseIntegrationTest : IAsyncLifetime
 
         repository.Update(ddd);
 
-		var dddDb = repository.FindById(ddd.Id).Result;
+		var dddDb = await repository.FindById(ddd.Id);
 
 		dddDb.Should().NotBeNull();
 		dddDb!.Region.Should().Be(secondDdd.Region);
@@ -89,7 +89,7 @@ public class DatabaseIntegrationTest : IAsyncLifetime
 		repository.Add(ddd);
         repository.Add(secondDdd);
 
-		var dddDb = repository.FindAll().Result;
+		var dddDb = await repository.FindAll();
 
 		dddDb.Should().NotBeNull();
         dddDb.Should().HaveCount(2);
@@ -106,7 +106,7 @@ public class DatabaseIntegrationTest : IAsyncLifetime
 		repository.Add(ddd);
 		repository.Delete(ddd);
 
-		var dddDb = repository.FindAll().Result;
+		var dddDb = await repository.FindAll();
 
 		dddDb.Should().HaveCount(0);
 	}
@@ -124,7 +124,7 @@ public class DatabaseIntegrationTest : IAsyncLifetime
 		dddRepository.Add(ddd);
 		clientRepository.Add(client);
 
-		var clientDb = clientRepository.FindById(client.Id).Result;
+		var clientDb = await clientRepository.FindById(client.Id);
 
 		clientDb.Should().NotBeNull();
 		clientDb!.Name.Should().Be(client.Name);
