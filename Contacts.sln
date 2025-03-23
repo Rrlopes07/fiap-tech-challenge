@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsApi.Test", "tests\ContactsApi.Test\ContactsApi.Test.csproj", "{05168BA4-50D4-456E-BA73-5530887BAE86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Test", "Infrastructure.Test\Infrastructure.Test.csproj", "{D7142BA8-F669-41D6-BE88-53D98E632809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Test", "tests\Infrastructure.Test\Infrastructure.Test.csproj", "{D7142BA8-F669-41D6-BE88-53D98E632809}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
