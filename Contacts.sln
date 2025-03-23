@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContactsApi.Test", "tests\ContactsApi.Test\ContactsApi.Test.csproj", "{05168BA4-50D4-456E-BA73-5530887BAE86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Test", "Infrastructure.Test\Infrastructure.Test.csproj", "{D7142BA8-F669-41D6-BE88-53D98E632809}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{05168BA4-50D4-456E-BA73-5530887BAE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05168BA4-50D4-456E-BA73-5530887BAE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05168BA4-50D4-456E-BA73-5530887BAE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7142BA8-F669-41D6-BE88-53D98E632809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7142BA8-F669-41D6-BE88-53D98E632809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7142BA8-F669-41D6-BE88-53D98E632809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7142BA8-F669-41D6-BE88-53D98E632809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

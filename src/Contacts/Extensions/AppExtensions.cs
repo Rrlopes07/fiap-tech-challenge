@@ -1,14 +1,13 @@
-﻿namespace ContactsApi.Extensions;
+﻿using Prometheus;
+
+namespace ContactsApi.Extensions;
 
 public static class AppExtensions
 {
 	public static WebApplication UseConfigurations(this WebApplication app)
 	{
-		if (app.Environment.IsDevelopment())
-		{
-			app.UseSwagger();
-			app.UseSwaggerUI();
-		}
+		app.UseSwagger();
+		app.UseSwaggerUI();
 
 		app.UseHttpsRedirection();
 
@@ -21,6 +20,8 @@ public static class AppExtensions
 			.MapDddEndpoints();
 		app.MapGroup("/client")
 			.MapClientEndpoints();
+		app.MapHealthChecks("/health");
+		app.MapMetrics();
 
 		return app;
 	}

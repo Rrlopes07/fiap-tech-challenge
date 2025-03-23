@@ -25,6 +25,14 @@ public static class BuilderExtensions
 		return builder;
 	}
 
+	public static WebApplicationBuilder AddPort(this WebApplicationBuilder builder)
+	{
+		builder.WebHost.ConfigureKestrel((context, serverOpt) =>
+			serverOpt.ListenAnyIP(5000));
+
+		return builder;
+	}
+
 	public static WebApplicationBuilder AddDependencies(this WebApplicationBuilder builder) 
 	{
 		builder.Services.AddTransient<ICacheService, CacheService>();

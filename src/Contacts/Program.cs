@@ -1,8 +1,13 @@
+using Prometheus;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddDb()
 	.AddServices()
-	.AddDependencies();
+	.AddDependencies()
+	.AddPort()
+	.Services.UseHttpClientMetrics()
+	.AddHealthChecks();
 
 var app = builder.Build();
 
